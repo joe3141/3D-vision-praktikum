@@ -1,0 +1,16 @@
+﻿  densecrf.cpp
+D:\RealTimeSegmentation\3dsis\3D-SIS-master\datagen\ScanReal\densecrf_v_2_2\densecrf\src\densecrf.cpp(28,10): fatal error C1083: Cannot open include file: 'densecrf.h': No such file or directory
+  labelcompatibility.cpp
+D:\RealTimeSegmentation\3dsis\3D-SIS-master\datagen\ScanReal\densecrf_v_2_2\densecrf\src\labelcompatibility.cpp(27,10): fatal error C1083: Cannot open include file: 'labelcompatibility.h': No such file or directory
+  objective.cpp
+D:\RealTimeSegmentation\3dsis\3D-SIS-master\datagen\ScanReal\densecrf_v_2_2\densecrf\src\objective.cpp(27,10): fatal error C1083: Cannot open include file: 'objective.h': No such file or directory
+  optimization.cpp
+D:\RealTimeSegmentation\3dsis\3D-SIS-master\datagen\ScanReal\densecrf_v_2_2\densecrf\src\optimization.cpp(27,10): fatal error C1083: Cannot open include file: 'optimization.h': No such file or directory
+  pairwise.cpp
+D:\RealTimeSegmentation\3dsis\3D-SIS-master\datagen\ScanReal\densecrf_v_2_2\densecrf\src\pairwise.cpp(27,10): fatal error C1083: Cannot open include file: 'pairwise.h': No such file or directory
+  permutohedral.cpp
+D:\RealTimeSegmentation\3dsis\3D-SIS-master\datagen\ScanReal\densecrf_v_2_2\densecrf\src\permutohedral.cpp(28,10): fatal error C1083: Cannot open include file: 'permutohedral.h': No such file or directory
+  unary.cpp
+D:\RealTimeSegmentation\3dsis\3D-SIS-master\datagen\ScanReal\densecrf_v_2_2\densecrf\src\unary.cpp(27,10): fatal error C1083: Cannot open include file: 'unary.h': No such file or directory
+  util.cpp
+D:\RealTimeSegmentation\3dsis\3D-SIS-master\datagen\ScanReal\densecrf_v_2_2\densecrf\src\util.h(30,10): fatal error C1083: Cannot open include file: 'densecrf.h': No such file or directory

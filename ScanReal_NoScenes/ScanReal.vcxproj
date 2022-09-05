@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B7522A83-8AE0-4351-BE91-71C5989A6519}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ScanReal</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>D:\mLibExternal\include\opencv_3_1\opencv2;D:\mLibExternal\include;D:\mLib\include;./src/;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x64;D:\mLibExternal\libsWindows\lib64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>D:\mLibExternal\include;D:\mLib\include;./src/;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x64;D:\mLibExternal\libsWindows\lib64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;NOMINMAX;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <OpenMPSupport>true</OpenMPSupport>
+      <AdditionalOptions>/Zm120 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>FW1FontWrapper.lib;d3d11.lib;d3dx11.lib;D3DCompiler.lib;FreeImage.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;NOMINMAX;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>D:\RealTimeSegmentation\3dsis\3D-SIS-master\datagen\ScanReal\rply-1.1.4;D:\RealTimeSegmentation\3dsis\3D-SIS-master\datagen\ScanReal\densecrf_v_2_2\densecrf\external\liblbfgs\include;D:\RealTimeSegmentation\3dsis\3D-SIS-master\datagen\ScanReal\densecrf_v_2_2\densecrf\src;D:\RealTimeSegmentation\3dsis\3D-SIS-master\datagen\ScanReal\densecrf_v_2_2\densecrf\include;$(IncludePath);$(DXSDK_DIR)Include;D:\mLibExternal\include\opencv_3_1\opencv;D:\mLibExternal\include\opencv_3_1\opencv2;D:\mLibExternal\include\opencv_3_1;..\..\mLibextern\include</AdditionalIncludeDirectories>
+      <OpenMPSupport>true</OpenMPSupport>
+      <AdditionalOptions>/Zm120 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>FW1FontWrapper.lib;d3d11.lib;d3dx11.lib;D3DCompiler.lib;FreeImage.lib;opencv_aruco310.lib;opencv_bgsegm310.lib;opencv_bioinspired310.lib;opencv_calib3d310.lib;opencv_ccalib310.lib;opencv_core310.lib;opencv_cudaarithm310.lib;opencv_cudabgsegm310.lib;opencv_cudacodec310.lib;opencv_cudafeatures2d310.lib;opencv_cudafilters310.lib;opencv_cudaimgproc310.lib;opencv_cudalegacy310.lib;opencv_cudaobjdetect310.lib;opencv_cudaoptflow310.lib;opencv_cudastereo310.lib;opencv_cudawarping310.lib;opencv_cudev310.lib;opencv_datasets310.lib;opencv_dnn310.lib;opencv_dpm310.lib;opencv_face310.lib;opencv_features2d310.lib;opencv_flann310.lib;opencv_fuzzy310.lib;opencv_highgui310.lib;opencv_imgcodecs310.lib;opencv_imgproc310.lib;opencv_line_descriptor310.lib;opencv_ml310.lib;opencv_objdetect310.lib;opencv_optflow310.lib;opencv_photo310.lib;opencv_plot310.lib;opencv_reg310.lib;opencv_rgbd310.lib;opencv_saliency310.lib;opencv_shape310.lib;opencv_stereo310.lib;opencv_stitching310.lib;opencv_structured_light310.lib;opencv_superres310.lib;opencv_surface_matching310.lib;opencv_text310.lib;opencv_tracking310.lib;opencv_ts300.lib;opencv_ts300d.lib;opencv_ts310.lib;opencv_video310.lib;opencv_videoio310.lib;opencv_videostab310.lib;opencv_world300.lib;opencv_world300d.lib;opencv_world310.lib;opencv_world310d.lib;opencv_xfeatures2d310.lib;opencv_ximgproc310.lib;opencv_xobjdetect310.lib;opencv_xphoto310.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(LibraryPath);$(DXSDK_DIR)Lib\x64; ..\..\mLibextern\libsWindows\lib64</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <FxCompile Include="shaders\phong.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="shaders\test.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="shaders\ward.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Aggregation.h" />
+    <ClInclude Include="src\BBHelper.h" />
+    <ClInclude Include="src\BBInfo.h" />
+    <ClInclude Include="src\CameraUtil.h" />
+    <ClInclude Include="src\Fuser.h" />
+    <ClInclude Include="src\GlobalAppState.h" />
+    <ClInclude Include="src\json.h" />
+    <ClInclude Include="src\LabelUtil.h" />
+    <ClInclude Include="src\Lighting.h" />
+    <ClInclude Include="src\MarchingCubes.h" />
+    <ClInclude Include="src\mLibInclude.h" />
+    <ClInclude Include="src\ScansDirectory.h" />
+    <ClInclude Include="src\Scene.h" />
+    <ClInclude Include="src\Segmentation.h" />
+    <ClInclude Include="src\SimpleMaterial.h" />
+    <ClInclude Include="src\stdafx.h" />
+    <ClInclude Include="src\Tables.h" />
+    <ClInclude Include="src\targetver.h" />
+    <ClInclude Include="src\Visualizer.h" />
+    <ClInclude Include="src\VoxelGrid.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="densecrf_v_2_2\densecrf\external\liblbfgs\lib\lbfgs.cpp" />
+    <ClCompile Include="densecrf_v_2_2\densecrf\src\densecrf.cpp" />
+    <ClCompile Include="densecrf_v_2_2\densecrf\src\labelcompatibility.cpp" />
+    <ClCompile Include="densecrf_v_2_2\densecrf\src\objective.cpp" />
+    <ClCompile Include="densecrf_v_2_2\densecrf\src\optimization.cpp" />
+    <ClCompile Include="densecrf_v_2_2\densecrf\src\pairwise.cpp" />
+    <ClCompile Include="densecrf_v_2_2\densecrf\src\permutohedral.cpp" />
+    <ClCompile Include="densecrf_v_2_2\densecrf\src\unary.cpp" />
+    <ClCompile Include="densecrf_v_2_2\densecrf\src\util.cpp" />
+    <ClCompile Include="rply-1.1.4\rply.cpp" />
+    <ClCompile Include="src\Aggregation.cpp" />
+    <ClCompile Include="src\Fuser.cpp" />
+    <ClCompile Include="src\json.cpp" />
+    <ClCompile Include="src\Lighting.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\MarchingCubes.cpp" />
+    <ClCompile Include="src\mLibSource.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\Scene.cpp" />
+    <ClCompile Include="src\Segmentation.cpp" />
+    <ClCompile Include="src\SimpleMaterial.cpp" />
+    <ClCompile Include="src\stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\Visualizer.cpp" />
+    <ClCompile Include="src\VoxelGrid.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="zParametersScanSN.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
